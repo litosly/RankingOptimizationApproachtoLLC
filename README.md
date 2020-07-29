@@ -31,6 +31,7 @@ We don't have rights to release the datasets. Please ask permission from Profess
 
 Please refer to the [`preprocess` folder](https://github.com/wuga214/DeepCritiquingForRecSys/tree/master/preprocess) for preprocessing raw datasets steps.
 Please refer to https://github.com/k9luo/LatentLinearCritiquingforConvRecSys for previous codebase for Latent Liear Critiquing.
+This repo adapts PLRec implementation from NCE-PLRec repo. The full version of the recommender system could be found in [https://github.com/wuga214/NCE_Projected_LRec]
 
 # Keyphrase
 Keyphrases we used are not necessarily the best. If you are interested in how we extracted those keyphrases, please refer to the [`preprocess` folder](https://github.com/wuga214/DeepCritiquingForRecSys/tree/master/preprocess). If you are interested in what keyphrases we extracted, please refer to the [`data` folder](TODO).
