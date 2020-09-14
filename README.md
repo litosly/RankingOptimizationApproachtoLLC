@@ -43,7 +43,7 @@ We use Gurobi Optimizer to train our LP Objectives, please see usage in [website
 Note: change --data_dir and --dataset_name for different dataset, change --topk for different number of top-K (K = 100 by default) rated items during optimization, change --lamb for different regularization parameter in equation(12). 
 ### Reproduce Critiquing
 ```
-python critiquing_experiment.py --data_dir "data/yelp/" --dataset_name "yelp" --save_path "test_result/beer/llc_rank_topk10_lamb10_diff.csv" --topk 10 --lamb 10 --keyphrase_selection_method diff
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name "yelp" --save_path "test_result/beer/llc_rank_topk10_lamb10_diff.csv" --topk 10 --lamb 10 --keyphrase_selection_method diff
 ```
 ### Hyperparameter Tuning 
 ```
