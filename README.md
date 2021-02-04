@@ -41,10 +41,23 @@ We use Gurobi Optimizer to train our LP Objectives, please see usage in [website
 
 # Example Commands
 Note: change --data_dir and --dataset_name for different dataset, change --topk for different number of top-K (K = 100 by default) rated items during optimization, change --lamb for different regularization parameter in equation(12). 
-### Reproduce Critiquing
+### Reproduce Yelp Critiquing result 
+UAC: 
 ```
-python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name "yelp" --save_path "test_result/beer/llc_rank_topk10_lamb10_diff.csv" --topk 10 --lamb 10 --keyphrase_selection_method diff
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path uac_random.csv --num_users_sampled 100 --critiquing_model_name uac --keyphrase_selection_method random
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path uac_diff.csv --num_users_sampled 100 --critiquing_model_name uac --keyphrase_selection_method diff
 ```
+BAC:
+```
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path bac_random.csv --num_users_sampled 100 --critiquing_model_name bac --keyphrase_selection_method random
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path bac_diff.csv --num_users_sampled 100 --critiquing_model_name bac --keyphrase_selection_method diff
+```
+LLC_Rank:
+```
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path llcrank_lamb200_top10_random.csv --num_users_sampled 100 --critiquing_model_name llc_rank --keyphrase_selection_method random --lamb 200 --topk 10
+python reproduce_critiquing.py --data_dir "data/yelp/" --dataset_name yelp/ --save_path llcrank_lamb200_top10_diff.csv --num_users_sampled 100 --critiquing_model_name llc_rank --keyphrase_selection_method diff --lamb 200 --topk 10
+```
+
 ### Hyperparameter Tuning 
 ```
 python tuning_experiment.py --data_dir "data/beer/" --dataset_name "beer" --save_path "tuning_lambda/beer/" 
