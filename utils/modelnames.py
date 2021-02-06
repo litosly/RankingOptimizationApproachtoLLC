@@ -14,6 +14,6 @@ critiquing_models = {
     "llc_score": LP1Simplified,
     "uac": UAC,
     "bac": BAC,
-    "llc_rank": LLCRank
+    "llc_rank": LLCRank,
     "llc_rank2": LLCRankNonIncremental
 }
